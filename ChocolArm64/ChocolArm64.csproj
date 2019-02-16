@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0306D418-5C89-4D90-9FDE-FB132C58E794}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChocolArm64</RootNamespace>
+    <AssemblyName>ChocolArm64</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABitUtils.cs" />
+    <Compile Include="AOpCodeTable.cs" />
+    <Compile Include="AOptimizations.cs" />
+    <Compile Include="AThread.cs" />
+    <Compile Include="ATranslatedSub.cs" />
+    <Compile Include="ATranslator.cs" />
+    <Compile Include="Decoder\ABlock.cs" />
+    <Compile Include="Decoder\ACond.cs" />
+    <Compile Include="Decoder\ADataOp.cs" />
+    <Compile Include="Decoder\ADecoder.cs" />
+    <Compile Include="Decoder\ADecoderHelper.cs" />
+    <Compile Include="Decoder\AIntType.cs" />
+    <Compile Include="Decoder\AOpCode.cs" />
+    <Compile Include="Decoder\AOpCodeAdr.cs" />
+    <Compile Include="Decoder\AOpCodeAlu.cs" />
+    <Compile Include="Decoder\AOpCodeAluImm.cs" />
+    <Compile Include="Decoder\AOpCodeAluRs.cs" />
+    <Compile Include="Decoder\AOpCodeAluRx.cs" />
+    <Compile Include="Decoder\AOpCodeBfm.cs" />
+    <Compile Include="Decoder\AOpCodeBImm.cs" />
+    <Compile Include="Decoder\AOpCodeBImmAl.cs" />
+    <Compile Include="Decoder\AOpCodeBImmCmp.cs" />
+    <Compile Include="Decoder\AOpCodeBImmCond.cs" />
+    <Compile Include="Decoder\AOpCodeBImmTest.cs" />
+    <Compile Include="Decoder\AOpCodeBReg.cs" />
+    <Compile Include="Decoder\AOpCodeCcmp.cs" />
+    <Compile Include="Decoder\AOpCodeCcmpImm.cs" />
+    <Compile Include="Decoder\AOpCodeCcmpReg.cs" />
+    <Compile Include="Decoder\AOpCodeCsel.cs" />
+    <Compile Include="Decoder\AOpCodeException.cs" />
+    <Compile Include="Decoder\AOpCodeMem.cs" />
+    <Compile Include="Decoder\AOpCodeMemEx.cs" />
+    <Compile Include="Decoder\AOpCodeMemImm.cs" />
+    <Compile Include="Decoder\AOpCodeMemLit.cs" />
+    <Compile Include="Decoder\AOpCodeMemPair.cs" />
+    <Compile Include="Decoder\AOpCodeMemReg.cs" />
+    <Compile Include="Decoder\AOpCodeMov.cs" />
+    <Compile Include="Decoder\AOpCodeMul.cs" />
+    <Compile Include="Decoder\AOpCodeSimd.cs" />
+    <Compile Include="Decoder\AOpCodeSimdCvt.cs" />
+    <Compile Include="Decoder\AOpCodeSimdFcond.cs" />
+    <Compile Include="Decoder\AOpCodeSimdFmov.cs" />
+    <Compile Include="Decoder\AOpCodeSimdImm.cs" />
+    <Compile Include="Decoder\AOpCodeSimdIns.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemImm.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemLit.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemMs.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemPair.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemReg.cs" />
+    <Compile Include="Decoder\AOpCodeSimdMemSs.cs" />
+    <Compile Include="Decoder\AOpCodeSimdReg.cs" />
+    <Compile Include="Decoder\AOpCodeSimdRegElem.cs" />
+    <Compile Include="Decoder\AOpCodeSimdShImm.cs" />
+    <Compile Include="Decoder\AOpCodeSimdTbl.cs" />
+    <Compile Include="Decoder\AOpCodeSystem.cs" />
+    <Compile Include="Decoder\AShiftType.cs" />
+    <Compile Include="Decoder\IAOpCode.cs" />
+    <Compile Include="Decoder\IAOpCodeAlu.cs" />
+    <Compile Include="Decoder\IAOpCodeAluImm.cs" />
+    <Compile Include="Decoder\IAOpCodeAluRs.cs" />
+    <Compile Include="Decoder\IAOpCodeAluRx.cs" />
+    <Compile Include="Decoder\IAOpCodeCond.cs" />
+    <Compile Include="Decoder\IAOpCodeLit.cs" />
+    <Compile Include="Decoder\IAOpCodeSimd.cs" />
+    <Compile Include="Exceptions\VmmAccessViolationException.cs" />
+    <Compile Include="Exceptions\VmmOutOfMemoryException.cs" />
+    <Compile Include="Exceptions\VmmPageFaultException.cs" />
+    <Compile Include="Instruction\AInst.cs" />
+    <Compile Include="Instruction\AInstEmitAlu.cs" />
+    <Compile Include="Instruction\AInstEmitAluHelper.cs" />
+    <Compile Include="Instruction\AInstEmitBfm.cs" />
+    <Compile Include="Instruction\AInstEmitCcmp.cs" />
+    <Compile Include="Instruction\AInstEmitCsel.cs" />
+    <Compile Include="Instruction\AInstEmitException.cs" />
+    <Compile Include="Instruction\AInstEmitFlow.cs" />
+    <Compile Include="Instruction\AInstEmitMemory.cs" />
+    <Compile Include="Instruction\AInstEmitMemoryEx.cs" />
+    <Compile Include="Instruction\AInstEmitMemoryHelper.cs" />
+    <Compile Include="Instruction\AInstEmitMove.cs" />
+    <Compile Include="Instruction\AInstEmitMul.cs" />
+    <Compile Include="Instruction\AInstEmitSimdArithmetic.cs" />
+    <Compile Include="Instruction\AInstEmitSimdCmp.cs" />
+    <Compile Include="Instruction\AInstEmitSimdCvt.cs" />
+    <Compile Include="Instruction\AInstEmitSimdHelper.cs" />
+    <Compile Include="Instruction\AInstEmitSimdLogical.cs" />
+    <Compile Include="Instruction\AInstEmitSimdMemory.cs" />
+    <Compile Include="Instruction\AInstEmitSimdMove.cs" />
+    <Compile Include="Instruction\AInstEmitSimdShift.cs" />
+    <Compile Include="Instruction\AInstEmitSystem.cs" />
+    <Compile Include="Instruction\AInstEmitter.cs" />
+    <Compile Include="Instruction\ASoftFallback.cs" />
+    <Compile Include="Memory\AMemory.cs" />
+    <Compile Include="Memory\AMemoryAlloc.cs" />
+    <Compile Include="Memory\AMemoryHelper.cs" />
+    <Compile Include="Memory\AMemoryMapInfo.cs" />
+    <Compile Include="Memory\AMemoryMgr.cs" />
+    <Compile Include="Memory\AMemoryPerm.cs" />
+    <Compile Include="State\AInstExceptEventArgs.cs" />
+    <Compile Include="State\AInstUndEventArgs.cs" />
+    <Compile Include="State\APState.cs" />
+    <Compile Include="State\ARegister.cs" />
+    <Compile Include="State\ARegisterSize.cs" />
+    <Compile Include="State\ARegisterType.cs" />
+    <Compile Include="State\AThreadState.cs" />
+    <Compile Include="State\AVec.cs" />
+    <Compile Include="Translation\AILBlock.cs" />
+    <Compile Include="Translation\AILEmitter.cs" />
+    <Compile Include="Translation\AILEmitterCtx.cs" />
+    <Compile Include="Translation\AILLabel.cs" />
+    <Compile Include="Translation\AILOpCode.cs" />
+    <Compile Include="Translation\AILOpCodeBranch.cs" />
+    <Compile Include="Translation\AILOpCodeCall.cs" />
+    <Compile Include="Translation\AILOpCodeConst.cs" />
+    <Compile Include="Translation\AILOpCodeLoad.cs" />
+    <Compile Include="Translation\AILOpCodeLog.cs" />
+    <Compile Include="Translation\AILOpCodeStore.cs" />
+    <Compile Include="Translation\AIoType.cs" />
+    <Compile Include="Translation\ALocalAlloc.cs" />
+    <Compile Include="Translation\IAILEmit.cs" />
+    <Compile Include="Translation\ILGeneratorEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

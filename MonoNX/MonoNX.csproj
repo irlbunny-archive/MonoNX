@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB7BEC9F-5C4F-4950-95E7-3BE781F5D66A}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoNX</RootNamespace>
+    <AssemblyName>MonoNX</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Hid.cs" />
+    <Compile Include="Hid\HidController.cs" />
+    <Compile Include="Hid\HidKeyboard.cs" />
+    <Compile Include="Hid\HidMouse.cs" />
+    <Compile Include="Hid\HidTouchScreen.cs" />
+    <Compile Include="Hid\HidUnknown.cs" />
+    <Compile Include="Hid\JoyCon.cs" />
+    <Compile Include="Loaders\Compression\Lz4.cs" />
+    <Compile Include="Loaders\ElfDyn.cs" />
+    <Compile Include="Loaders\ElfDynTag.cs" />
+    <Compile Include="Loaders\ElfRel.cs" />
+    <Compile Include="Loaders\ElfRelType.cs" />
+    <Compile Include="Loaders\ElfSym.cs" />
+    <Compile Include="Loaders\ElfSymBinding.cs" />
+    <Compile Include="Loaders\ElfSymType.cs" />
+    <Compile Include="Loaders\ElfSymVisibility.cs" />
+    <Compile Include="Loaders\Executable.cs" />
+    <Compile Include="Loaders\Executables\IExecutable.cs" />
+    <Compile Include="Loaders\Executables\Nro.cs" />
+    <Compile Include="Loaders\Executables\Nso.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="OsHle\CondVar.cs" />
+    <Compile Include="OsHle\Display.cs" />
+    <Compile Include="OsHle\Exceptions\GuestBrokeExecutionException.cs" />
+    <Compile Include="OsHle\Exceptions\UndefinedInstructionException.cs" />
+    <Compile Include="OsHle\FileDesc.cs" />
+    <Compile Include="OsHle\Handles\HDomain.cs" />
+    <Compile Include="OsHle\Handles\HEvent.cs" />
+    <Compile Include="OsHle\Handles\HNvMap.cs" />
+    <Compile Include="OsHle\Handles\HSession.cs" />
+    <Compile Include="OsHle\Handles\HSessionObj.cs" />
+    <Compile Include="OsHle\Handles\HSharedMem.cs" />
+    <Compile Include="OsHle\Handles\HThread.cs" />
+    <Compile Include="OsHle\Handles\HTransferMem.cs" />
+    <Compile Include="OsHle\Handles\KProcessScheduler.cs" />
+    <Compile Include="OsHle\Horizon.cs" />
+    <Compile Include="OsHle\Ipc\IpcBuffDesc.cs" />
+    <Compile Include="OsHle\Ipc\IpcDomCmd.cs" />
+    <Compile Include="OsHle\Ipc\IpcHandleDesc.cs" />
+    <Compile Include="OsHle\Ipc\IpcHandler.cs" />
+    <Compile Include="OsHle\Ipc\IpcMessage.cs" />
+    <Compile Include="OsHle\Ipc\IpcMessageType.cs" />
+    <Compile Include="OsHle\Ipc\IpcPtrBuffDesc.cs" />
+    <Compile Include="OsHle\Ipc\IpcRecvListBuffDesc.cs" />
+    <Compile Include="OsHle\Ipc\ServiceProcessRequest.cs" />
+    <Compile Include="OsHle\MemoryInfo.cs" />
+    <Compile Include="OsHle\MemoryType.cs" />
+    <Compile Include="OsHle\Mutex.cs" />
+    <Compile Include="OsHle\Objects\Acc\IManagerForApplication.cs" />
+    <Compile Include="OsHle\Objects\Acc\IProfile.cs" />
+    <Compile Include="OsHle\Objects\Am\IApplicationFunctions.cs" />
+    <Compile Include="OsHle\Objects\Am\IApplicationProxy.cs" />
+    <Compile Include="OsHle\Objects\Am\IAudioController.cs" />
+    <Compile Include="OsHle\Objects\Am\ICommonStateGetter.cs" />
+    <Compile Include="OsHle\Objects\Am\IDebugFunctions.cs" />
+    <Compile Include="OsHle\Objects\Am\IDisplayController.cs" />
+    <Compile Include="OsHle\Objects\Am\ILibraryAppletCreator.cs" />
+    <Compile Include="OsHle\Objects\Am\IParentalControlService.cs" />
+    <Compile Include="OsHle\Objects\Am\ISelfController.cs" />
+    <Compile Include="OsHle\Objects\Am\IStorage.cs" />
+    <Compile Include="OsHle\Objects\Am\IStorageAccessor.cs" />
+    <Compile Include="OsHle\Objects\Am\IWindowController.cs" />
+    <Compile Include="OsHle\Objects\Apm\ISession.cs" />
+    <Compile Include="OsHle\Objects\Aud\IAudioOut.cs" />
+    <Compile Include="OsHle\Objects\Aud\IAudioRenderer.cs" />
+    <Compile Include="OsHle\Objects\Friend\IFriendService.cs" />
+    <Compile Include="OsHle\Objects\FspSrv\IDirectory.cs" />
+    <Compile Include="OsHle\Objects\FspSrv\IFile.cs" />
+    <Compile Include="OsHle\Objects\FspSrv\IFileSystem.cs" />
+    <Compile Include="OsHle\Objects\FspSrv\IStorage.cs" />
+    <Compile Include="OsHle\Objects\Hid\IAppletResource.cs" />
+    <Compile Include="OsHle\Objects\IIpcInterface.cs" />
+    <Compile Include="OsHle\Objects\ObjHelper.cs" />
+    <Compile Include="OsHle\Objects\Parcel.cs" />
+    <Compile Include="OsHle\Objects\Time\ISteadyClock.cs" />
+    <Compile Include="OsHle\Objects\Time\ISystemClock.cs" />
+    <Compile Include="OsHle\Objects\Time\ITimeZoneService.cs" />
+    <Compile Include="OsHle\Objects\Time\SystemClockType.cs" />
+    <Compile Include="OsHle\Objects\Vi\IApplicationDisplayService.cs" />
+    <Compile Include="OsHle\Objects\Vi\IHOSBinderDriver.cs" />
+    <Compile Include="OsHle\Objects\Vi\IManagerDisplayService.cs" />
+    <Compile Include="OsHle\Objects\Vi\ISystemDisplayService.cs" />
+    <Compile Include="OsHle\Process.cs" />
+    <Compile Include="OsHle\ServiceCtx.cs" />
+    <Compile Include="OsHle\Services\ServiceAcc.cs" />
+    <Compile Include="OsHle\Services\ServiceApm.cs" />
+    <Compile Include="OsHle\Services\ServiceAppletOE.cs" />
+    <Compile Include="OsHle\Services\ServiceAud.cs" />
+    <Compile Include="OsHle\Services\ServiceFriend.cs" />
+    <Compile Include="OsHle\Services\ServiceFspSrv.cs" />
+    <Compile Include="OsHle\Services\ServiceHid.cs" />
+    <Compile Include="OsHle\Services\ServiceLm.cs" />
+    <Compile Include="OsHle\Services\ServiceNvDrv.cs" />
+    <Compile Include="OsHle\Services\ServicePctl.cs" />
+    <Compile Include="OsHle\Services\ServicePl.cs" />
+    <Compile Include="OsHle\Services\ServiceSet.cs" />
+    <Compile Include="OsHle\Services\ServiceSm.cs" />
+    <Compile Include="OsHle\Services\ServiceTime.cs" />
+    <Compile Include="OsHle\Services\ServiceVi.cs" />
+    <Compile Include="OsHle\Svc\SvcHandler.cs" />
+    <Compile Include="OsHle\Svc\SvcMemory.cs" />
+    <Compile Include="OsHle\Svc\SvcResult.cs" />
+    <Compile Include="OsHle\Svc\SvcSystem.cs" />
+    <Compile Include="OsHle\Svc\SvcThread.cs" />
+    <Compile Include="OsHle\Svc\SvcThreadSync.cs" />
+    <Compile Include="OsHle\Utilities\IdPool.cs" />
+    <Compile Include="OsHle\Utilities\IdPoolWithObj.cs" />
+    <Compile Include="OsHle\Utilities\MemReader.cs" />
+    <Compile Include="OsHle\Utilities\MemWriter.cs" />
+    <Compile Include="Switch.cs" />
+    <Compile Include="Ui\GLScreen.cs" />
+    <Compile Include="Ui\MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="VirtualFs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>3.0.0.12</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker">
+      <Version>2.0.135</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChocolArm64\ChocolArm64.csproj">
+      <Project>{0306d418-5c89-4d90-9fde-fb132c58e794}</Project>
+      <Name>ChocolArm64</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonoNX.Graphics\MonoNX.Graphics.csproj">
+      <Project>{96e71960-48c4-48db-ae6a-45302d178fdf}</Project>
+      <Name>MonoNX.Graphics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\back.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>
