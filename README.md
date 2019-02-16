@@ -18,10 +18,9 @@ Secondly, your test ROM or Homebrew executable will need to be placed within the
 
 # Credits
 
-* Ryujinx Team - For the codebase
-* Cyuubi - For porting all of this to Android
-* Dr.Hacknik - Logo Design 
-
+* Ryujinx Team - For the base of MonoNX, without them this would not be possible! Show them some love over at their GitHub (https://github.com/Ryujinx/Ryujinx).
+* Xamarin - For allowing us C# developers to program on Android.
+* Dr.Hacknik - Logo design 
 
 # Support 
 You may join us on our Discord server, [here](https://discord.gg/XnbXNQM). You can get help, ask questions or help contribute there.
