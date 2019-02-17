@@ -22,7 +22,6 @@ Secondly, your test ROM or Homebrew executable will need to be placed within the
 * Cyuubi - For porting all of this to Android.
 * Dr.Hacknik - Logo Design.
 
-
 # Support 
 You may join us on our Discord server, [here](https://discord.gg/XnbXNQM). You can get help, ask questions or help contribute there.
 
