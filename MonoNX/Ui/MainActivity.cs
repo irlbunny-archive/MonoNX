@@ -18,7 +18,7 @@ namespace MonoNX
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        //GLScreen view;
+        GLScreen view;
 
         public static TextView nxLog;
 
@@ -34,8 +34,7 @@ namespace MonoNX
 
             Switch Ns = new Switch(Renderer);
 
-            //view = new GLScreen(this, Ns, Renderer);
-            //SetContentView(view);
+            view = new GLScreen(this, Ns, Renderer);
 
             SetContentView(Resource.Layout.activity_main);
 
@@ -66,20 +65,20 @@ namespace MonoNX
             };
 
             viewDisplayBtn.Click += delegate {
-                Toast.MakeText(this, "Currently unimplemented.", ToastLength.Short).Show();
+                SetContentView(view);
             };
         }
 
         protected override void OnPause()
         {
             base.OnPause();
-            //view.Pause();
+            view.Pause();
         }
 
         protected override void OnResume()
         {
             base.OnResume();
-            //view.Resume();
+            view.Resume();
         }
     }
 }
