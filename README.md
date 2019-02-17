@@ -7,7 +7,7 @@ An experimental Nintendo Switch emulator for Android!
 
 You will need a device with the following, minimal specifications: 
 * A device running Android 5.1 or greater.
-* A device using ARM64 (A 64bit Arch CPU, preferably Quadcore).
+* A device using ARM64 (A 64bit Arch CPU, preferably Quad-Core).
 * 4GB of RAM as a minimum. 
 * A test ROM or any form of Homebrew.
 
@@ -19,8 +19,7 @@ Secondly, your test ROM or Homebrew executable will need to be placed within the
 # Credits
 * Ryujinx Team - For the base of MonoNX, without them this would not be possible! Show them some love over at their [GitHub](https://github.com/Ryujinx/Ryujinx).
 * Xamarin - For allowing us C# developers to program on Android.
-* Dr.Hacknik - Logo design
-
+* Dr.Hacknik - Logo design.
 
 # Support 
 You may join us on our Discord server, [here](https://discord.gg/XnbXNQM). You can get help, ask questions or help contribute there.
