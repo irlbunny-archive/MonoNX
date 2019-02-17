@@ -22,7 +22,6 @@ Secondly, your test ROM or Homebrew executable will need to be placed within the
 * Dr.Hacknik - Logo design
 
 
-
 # Support 
 You may join us on our Discord server, [here](https://discord.gg/XnbXNQM). You can get help, ask questions or help contribute there.
 
