@@ -1,17 +1,17 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
-using Android.Runtime;
 using Android.Widget;
+using Android.Util;
+using Android.Text.Method;
+
+using System;
+
+using Plugin.FilePicker;
+using Plugin.FilePicker.Abstractions;
+
 using MonoNX.Graphics.Gal;
 using MonoNX.Graphics.Gal.OpenGL;
-using System.IO;
-using Plugin.FilePicker.Abstractions;
-using System;
-using Plugin.FilePicker;
-using Plugin.Permissions;
-using Plugin.Permissions.Abstractions;
-using Android.Util;
 
 namespace MonoNX
 {
@@ -25,8 +25,6 @@ namespace MonoNX
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            //TODO: Permission check for storage here?
 
             Config.Read();
 
@@ -43,6 +41,8 @@ namespace MonoNX
 
             nxLog = FindViewById<TextView>(Resource.Id.nxLog);
 
+            nxLog.MovementMethod = new ScrollingMovementMethod();
+
             nxLog.LayoutParameters.Width  = displayMetrics.WidthPixels;
             nxLog.LayoutParameters.Height = displayMetrics.HeightPixels;
 
@@ -56,11 +56,11 @@ namespace MonoNX
                     if (FileInput == null)
                         return;
 
-                    Ns.Os.LoadProgram(FileInput.FilePath); //TODO: Add resolver for content:/?
+                    Ns.Os.LoadProgram(FileInput.FileName, FileInput.GetStream());
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
-                    Logging.Error($"An exception has occured while loading a ROM: {ex.ToString()}");
+                    Logging.Error($"An exception has occured: {e.ToString()}");
                 }
             };
 

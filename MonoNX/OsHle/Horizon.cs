@@ -112,6 +112,35 @@ namespace MonoNX.OsHle
             Processes.TryAdd(ProcessId, MainProcess);
         }
 
+        public void LoadProgram(string FileName, Stream DataStream)
+        {
+            int ProcessId = IdGen.GenerateId();
+
+            Process MainProcess = new Process(Ns, Allocator, ProcessId);
+
+            using (MemoryStream Input = new MemoryStream())
+            {
+                DataStream.CopyTo(Input);
+
+                if (Path.GetExtension(FileName).ToLower() == ".nro")
+                {
+                    MainProcess.LoadProgram(new Nro(Input));
+                }
+                else
+                {
+                    MainProcess.LoadProgram(new Nso(Input));
+                }
+
+                DataStream.Dispose();
+            }
+
+            MainProcess.SetEmptyArgs();
+            MainProcess.InitializeHeap();
+            MainProcess.Run();
+
+            Processes.TryAdd(ProcessId, MainProcess);
+        }
+
         public void LoadProgram(string FileName)
         {
             int ProcessId = IdGen.GenerateId();

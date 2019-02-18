@@ -1,7 +1,7 @@
-using System;
-
 using Android.Content;
 using Android.Util;
+
+using System;
 
 using OpenTK;
 using OpenTK.Graphics;
