@@ -10,10 +10,7 @@ You will need a device with the following, minimal specifications:
 * A device using an ARM64 or a 64-bit x86 processor (preferably Quad-Core).
 * 4GB of RAM as a minimum (although, it may work with less).
 
-In order to play or use any form of Homebrew, the Application (as of now) will need 
-you to configure Storage permissions manually; unless your copy of Android asks for permissions automatically. 
-
-Secondly, your test ROM or Homebrew executable will need to be placed within the root of your storage. *IE: `storage/media` or `storage/emulated/0` depending on your device's ROM.*
+In order to play or use any form of Homebrew, the Application (as of now) will need you to configure Storage permissions manually; unless your copy of Android asks for permissions automatically.
 
 # Credits
 * Ryujinx Team - For the base of MonoNX, without them this would not be possible! Show them some love over at their [GitHub](https://github.com/Ryujinx/Ryujinx).
