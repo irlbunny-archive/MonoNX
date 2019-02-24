@@ -8,7 +8,6 @@ An experimental Nintendo Switch emulator for Android!
 You will need a device with the following, minimal specifications: 
 * A device running Android 5.1 or greater.
 * A device using an ARM64 or a 64-bit x86 processor (preferably Quad-Core).
-* 4GB of RAM as a minimum (although, it may work with less).
 
 In order to play or use any form of Homebrew, the Application (as of now) will need you to configure Storage permissions manually; unless your copy of Android asks for permissions automatically.
 
