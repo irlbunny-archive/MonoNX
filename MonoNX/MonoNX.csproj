@@ -61,7 +61,6 @@
     <EnableProguard>true</EnableProguard>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OpenTK-1.0" />
     <Reference Include="System" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml" />
@@ -180,7 +179,6 @@
     <Compile Include="OsHle\Utilities\MemReader.cs" />
     <Compile Include="OsHle\Utilities\MemWriter.cs" />
     <Compile Include="Switch.cs" />
-    <Compile Include="Ui\GLScreen.cs" />
     <Compile Include="Ui\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="VirtualFs.cs" />
@@ -235,6 +233,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\back.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

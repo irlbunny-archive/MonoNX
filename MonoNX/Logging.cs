@@ -51,7 +51,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | INFO  > {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.White;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));
@@ -67,7 +67,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | TRACE > {WhoCalledMe()} - {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.DarkGray;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));
@@ -83,7 +83,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | DEBUG > {WhoCalledMe()} - {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.Gray;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));
@@ -99,7 +99,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | WARN  > {WhoCalledMe()} - {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.Yellow;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));
@@ -115,7 +115,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | ERROR > {WhoCalledMe()} - {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.Red;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));
@@ -131,7 +131,7 @@ namespace MonoNX
             {
                 string Text = $"{GetExecutionTime()} | FATAL > {WhoCalledMe()} - {Message}";
 
-                MainActivity.nxLog.Text += $"{Text}\n";
+                MainActivity.NxLog.Text += $"{Text}\n";
 
                 //Console.ForegroundColor = ConsoleColor.Magenta;
                 //Console.WriteLine(Text.PadLeft(Text.Length + 1, ' '));

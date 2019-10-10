@@ -39,7 +39,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="OpenTK-1.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,7 +56,7 @@
     <Compile Include="Gal\GalVertexAttribSize.cs" />
     <Compile Include="Gal\GalVertexAttribType.cs" />
     <Compile Include="Gal\IGalRenderer.cs" />
-    <Compile Include="Gal\OpenGL\OpenGLRenderer.cs" />
+    <Compile Include="Gal\Null\NullRenderer.cs" />
     <Compile Include="Gpu\BCn.cs" />
     <Compile Include="Gpu\NsGpu.cs" />
     <Compile Include="Gpu\NsGpuEngine.cs" />
